@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from datetime import datetime, timezone
 from typing import Optional
+from app.database import engine, Base
 
 from .database import engine, Base, get_db
 from .models import Profile
@@ -19,6 +20,8 @@ from .schemas import (
     ProfileIdempotentResponse,
 )
 from .services import fetch_profile_data
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Profile Intelligence Service")
 

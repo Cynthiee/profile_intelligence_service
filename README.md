@@ -20,7 +20,7 @@ https://YOUR-DEPLOYED-URL.railway.app
 
 ## Tech Stack
 - FastAPI
-- SQLAlchemy + SQLite
+- SQLAlchemy + Postgresql
 - httpx (async HTTP client)
 - UUID v7
 

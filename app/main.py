@@ -6,7 +6,6 @@ from sqlalchemy.orm import Session
 from sqlalchemy import func
 from datetime import datetime, timezone
 from typing import Optional
-from app.database import engine, Base
 
 from .database import engine, Base, get_db
 from .models import Profile
@@ -21,15 +20,13 @@ from .schemas import (
 )
 from .services import fetch_profile_data
 
-Base.metadata.create_all(bind=engine)
-
 app = FastAPI(title="Profile Intelligence Service")
 
 # CORS — required by the grading script so it can reach your server from a browser
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

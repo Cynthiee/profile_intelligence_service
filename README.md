@@ -4,7 +4,7 @@
 A RESTful API that enriches names using Genderize, Agify, and Nationalize APIs, persists the processed data, and provides CRUD operations with idempotency and filtering support.
 
 ## Live API Base URL
-https://YOUR-DEPLOYED-URL.railway.app
+(https://profile-intelligence-service-gebtpjstt-cynthiees-projects.vercel.app/)
 
 ## Endpoints
 - `POST /api/profiles` – Create or retrieve existing profile
@@ -14,7 +14,7 @@ https://YOUR-DEPLOYED-URL.railway.app
 
 ## Local Setup
 1. `python -m venv venv`
-2. `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (macOS/Linux)
+2. `venv\Scripts\activate` (Windows)
 3. `pip install -r requirements.txt`
 4. `uvicorn app.main:app --reload`
 
